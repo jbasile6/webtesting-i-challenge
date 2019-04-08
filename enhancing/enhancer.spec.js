@@ -19,7 +19,7 @@ let fifteenEnhancement = {
     durability: 15
 }
 let AlmostFullEnhancement = {
-    name: 'Full Enhancement and Durability Points',
+    name: 'Almost Full Enhancement and Durability Points',
     enhancement: 19,
     durability: 99
 }
@@ -53,6 +53,14 @@ describe('enhancer.js', () => {
                 //enhancement over 15
                 expect(enhancer.fail(fullEnhancement).enhancement).toBe(19);
                 expect(enhancer.fail(AlmostFullEnhancement).durability).toBe(89);
+            })
+        });
+        describe('repair(item', () => {
+            it('repair item testing', () => {
+                expect(enhancer.repair(fullEnhancement).durability).toBe(100);
+                expect(enhancer.repair(halfEnhancement).durability).toBe(100);
+                expect(enhancer.repair(fifteenEnhancement).durability).toBe(100);
+                expect(enhancer.repair(AlmostFullEnhancement).durability).toBe(100);
             })
         })
     })

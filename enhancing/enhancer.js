@@ -34,14 +34,11 @@ function succeed(item) {
 function fail(item) {
   if (item.enhancement < 15) {
     item.durability -= 5;
-    //return { ...item };
   } else if (item.enhancement >= 15) {
     item.durability -= 10;
-    //return { ...item };
   };
   if(item.enhancement > 16) {
     item.enhancement --;
-    return { ...item };
   }
 
   return { ...item };
@@ -51,7 +48,12 @@ function fail(item) {
 //with the durability restored to 100. This method is the simplest
 // of the three and would be a good starting point on this project.
 function repair(item) {
-  return { ...item };
+  if (item.durability === 100) {
+    return { ...item };
+  } else {
+    item.durability = 100;
+    return { ...item };
+  }
 }
 
 //a get() method for use when working on the stretch problem.
