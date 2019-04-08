@@ -6,7 +6,7 @@
   "author": "James Basile <jbasile145@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch --verbose"
   },
   "devDependencies": {
     "jest": "^24.7.1"
