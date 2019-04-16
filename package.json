@@ -1,0 +1,14 @@
+{
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jbasile6/webtesting-i-challenge.git",
+  "author": "James Basile <jbasile145@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --watch --verbose"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
